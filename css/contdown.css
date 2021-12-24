@@ -1,0 +1,36 @@
+h1 {
+    font-weight: bold;
+    font-size: 4rem;
+    margin-top: 5rem;
+    font-family: 'MonteCarlo', cursive;
+}
+
+.countdown {
+    background: url('../img/snow-forest.jpg') center center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.countdown-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    justify-content: center;
+
+}
+
+.countdown-text {
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+}
+
+.countdown-item {
+    text-align: center;
+}
+
+.countdown-item span {
+    font-size: 1.3rem;
+}
