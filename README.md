@@ -1,4 +1,4 @@
-# [Pulse](https://mkaell.github.io/Timer/)
+# [Timer](https://mkaell.github.io/Timer/)
 
 ### _Application functionality:_ 
 This application shows the number of days remaining until the new year . The background changes depending on the season. The timer is updated automatically.
