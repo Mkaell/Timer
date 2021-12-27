@@ -7,12 +7,16 @@ function changeBackground(currentMounth, selector){
     const wrapper = document.querySelector(selector);
     if(currentMounth > 1 && currentMounth < 5){
         wrapper.style.background = "url('./img/spring.jpg') center center/cover no-repeat";
+        document.location.reload();
     } else if(currentMounth > 4 && currentMounth < 8){
         wrapper.style.background = "url('./img/summer.jpg') center center/cover no-repeat";
+        document.location.reload();
     } else if(currentMounth > 7 && currentMounth < 11){
         wrapper.style.background = "url('./img/autumn.jpg') center center/cover no-repeat";
+        document.location.reload();
     } else {
         wrapper.style.background = "url('./img/winter.jpg') center center/cover no-repeat";
+        document.location.reload();
     }
 }
 
