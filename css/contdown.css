@@ -16,7 +16,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(4, 200px);
     justify-content: center;
-
+    transition: all 0.5s ease-out
 }
 
 .countdown-text {

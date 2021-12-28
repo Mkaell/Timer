@@ -1,27 +1,42 @@
 const date = new Date();
 const currentYear = date.getFullYear();
 const currentMounth = date.getMonth();
+const currentDay = date.getDate();
+const currentHours = date.getHours();
+const currentMinutes = date.getMinutes();
+const currentSeconds = date.getSeconds();
 const deadline = `${currentYear + 1}-01-01`;
 
-function changeBackground(currentMounth, selector){
-    const wrapper = document.querySelector(selector);
-    if(currentMounth > 1 && currentMounth < 5){
-        wrapper.style.background = "url('./img/spring.jpg') center center/cover no-repeat";
-        document.location.reload();
-    } else if(currentMounth > 4 && currentMounth < 8){
-        wrapper.style.background = "url('./img/summer.jpg') center center/cover no-repeat";
-        document.location.reload();
-    } else if(currentMounth > 7 && currentMounth < 11){
-        wrapper.style.background = "url('./img/autumn.jpg') center center/cover no-repeat";
-        document.location.reload();
-    } else {
-        wrapper.style.background = "url('./img/winter.jpg') center center/cover no-repeat";
-        document.location.reload();
+
+function checkStartSeason(){
+    if(currentMounth === 2 && currentDay === 1 &&
+       currentHours === 0 && currentMinutes === 0 && currentSeconds === 0){
+        location.reload();
+    } else if(currentMounth === 5 && currentDay === 1 && 
+              currentHours === 0 && currentMinutes === 0 && currentSeconds === 0){
+        location.reload();
+    } else if(currentMounth === 8 && currentDay === 1 && 
+              currentHours === 0 && currentMinutes === 0 && currentSeconds === 0){
+        location.reload();
+    } else if(currentMounth === 11 && currentDay === 1 && 
+              currentHours === 0 && currentMinutes === 0 && currentSeconds === 0){
+        location.reload();
     }
 }
 
-changeBackground(currentMounth, '.countdown');
-
+function changeBackground(currentMounth, selector){
+    const wrapper = document.querySelector(selector);
+ 
+    if(currentMounth > 1 && currentMounth < 5){
+        wrapper.style.background = "url('./img/spring.jpg') center center/cover no-repeat";
+    } else if(currentMounth > 4 && currentMounth < 8){
+        wrapper.style.background = "url('./img/summer.jpg') center center/cover no-repeat";
+    } else if(currentMounth > 7 && currentMounth < 11){
+        wrapper.style.background = "url('./img/autumn.jpg') center center/cover no-repeat";
+    } else {
+        wrapper.style.background = "url('./img/winter.jpg') center center/cover no-repeat";
+    }
+}
 
 function getTimeRemaining(endtime) {
     const t = Date.parse(endtime) - Date.parse(new Date()),
@@ -77,4 +92,5 @@ function setClock(selector, endtime) {
 }
 
 setClock('.timer', deadline);
-
+checkStartSeason();
+changeBackground(currentMounth, '.countdown');
